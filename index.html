@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TaskCash - Earn Real Cash</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="./style.css">
+<meta name="theme-color" content="#4CAF50">
+</head>
+<body>
+<header>
+  <h1>TaskCash</h1>
+  <nav>
+    <a href="#tasks">Tasks</a>
+    <a href="#wallet">Wallet</a>
+    <a href="#profile">Profile</a>
+  </nav>
+</header>
+
+<section id="login">
+  <h2>Login / Register</h2>
+  <input type="text" id="username-input" placeholder="Enter your name">
+  <button onclick="loginUser()">Login</button>
+</section>
+
+<section id="admin">
+  <h2>Admin: Create Task</h2>
+  <input type="text" id="task-title" placeholder="Task Title">
+  <input type="number" id="task-reward" placeholder="Reward ($)">
+  <button onclick="createTask()">Add Task</button>
+</section>
+
+<section id="tasks">
+  <h2>Available Tasks</h2>
+  <div class="task-list"></div>
+</section>
+
+<section id="recommendations">
+  <h2>Recommended Tasks for You</h2>
+  <div class="task-list" id="recommended-tasks"></div>
+</section>
+
+<section id="wallet">
+  <h2>Wallet</h2>
+  <p>Balance: $<span id="balance">0</span></p>
+</section>
+
+<section id="profile">
+  <h2>User Profile</h2>
+  <p>Name: <span id="username">Guest</span></p>
+  <p>Tasks Completed: <span id="tasks-completed">0</span></p>
+</section>
+
+<section id="leaderboard">
+  <h2>Leaderboard</h2>
+  <ol id="leaderboard-list"></ol>
+</section>
+
+<section id="notifications">
+  <h2>Notifications</h2>
+  <ul id="notification-list"></ul>
+</section>
+
+<section id="gamification">
+  <h2>Achievements & Progress</h2>
+  <div id="badges">
+    <h3>Badges:</h3>
+    <ul id="badge-list"></ul>
+  </div>
+  <div id="progress">
+    <h3>Progress:</h3>
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+  </div>
+</section>
+
+<section id="withdraw">
+  <h2>Withdraw Earnings</h2>
+  <p>Your Balance: $<span id="withdraw-balance">0</span></p>
+  <div id="paypal-button-container"></div>
+</section>
+
+<script src="script.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>

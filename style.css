@@ -1,0 +1,113 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f4f4f9, #e0f7fa);
+  color: #333;
+}
+
+header {
+  background: #4CAF50;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+nav a {
+  color: white;
+  margin: 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav a:hover { color: #ffeb3b; }
+
+section {
+  padding: 2rem;
+  margin: 1rem;
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.task-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.task {
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s;
+  opacity: 0;
+}
+.task:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+button {
+  background: linear-gradient(135deg, #4CAF50, #66BB6A);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+#login input, #admin input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+#tasks, #wallet, #profile { display: none; }
+
+#gamification, #leaderboard, #notifications, #recommendations, #withdraw, #admin { margin: 2rem 0; }
+
+#badge-list { display: flex; gap: 1rem; list-style: none; padding: 0; }
+#badge-list li {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+#progress-bar-container {
+  width: 100%;
+  background: #ddd;
+  border-radius: 20px;
+  margin-top: 0.5rem;
+}
+#progress-bar {
+  height: 20px;
+  width: 0%;
+  background: linear-gradient(135deg, #4CAF50, #66BB6A);
+  border-radius: 20px;
+  transition: width 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  header { flex-direction: column; align-items: flex-start; }
+  nav { margin-top: 0.5rem; }
+  section { margin: 1rem 0.5rem; padding: 1.5rem; }
+  .task-list { grid-template-columns: 1fr; }
+}
